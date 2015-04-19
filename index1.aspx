@@ -115,7 +115,7 @@ Public Class Playersdetails
         Hiddenfield1 = Hiddenfield1.Replace(" ", "");
         Session["loggeduser"] = Session["loggeduser"];
 
-        Session["loggeduserurl"] = "https://treasurehunterweb.apphb.com/images/150/jpg";
+        Session["loggeduserurl"] = "https://thunterweb.apphb.com/images/150/jpg";
 
         if (Hiddenfield1 != null)
         {
@@ -235,7 +235,7 @@ Public Class Playersdetails
         else
         {
 
-            Response.Redirect("https://treasurehunterweb.apphb.com/buy.aspx");
+            Response.Redirect("https://thunterweb.apphb.com/buy.aspx");
         }
 
     }
@@ -368,7 +368,7 @@ Public Class Playersdetails
             }
             catch (Exception e)
             {
-                Response.Redirect("https://treasurehunterweb.apphb.com/Home/Index1");
+                Response.Redirect("https://thunterweb.apphb.com/Home/Index1");
 
             }
         }
@@ -552,14 +552,14 @@ Public Class Playersdetails
 
                 if (Convert.ToString(Session["reached"]) == "no")
                 {
-                    Response.Redirect("https://treasurehunterweb.apphb.com/Home/Index1");
+                    Response.Redirect("https://thunterweb.apphb.com/Home/Index1");
                 }
             }
             else if (Session["reached"] != null)
             {
                 if (Convert.ToString(Session["reached"]) == "no")
                 {
-                    Response.Redirect("https://treasurehunterweb.apphb.com/Home/Index1");
+                    Response.Redirect("https://thunterweb.apphb.com/Home/Index1");
                 }
             }
             checkusername();
@@ -596,7 +596,7 @@ Public Class Playersdetails
 
             if (logintimes != "0" && btspots == "0")
             {
-                Response.Redirect("https://treasurehunterweb.apphb.com/Tspot/buy");
+                Response.Redirect("https://thunterweb.apphb.com/Tspot/buy");
 
             }
         }
@@ -734,10 +734,10 @@ Public Class Playersdetails
     </style>
 
 
-    <script src="https://treasurehunterweb.apphb.com/Scripts/jquery-1.8.2.js"></script>
-    <script src="https://treasurehunterweb.apphb.com/Scripts/jquery-ui-1.10.3.js"></script>
-    <script src="https://treasurehunterweb.apphb.com/Scripts/jquery.signalR-2.0.1.js"></script>
-    <script src="https://treasurehunterweb.apphb.com/SignalR/hubs"></script>
+    <script src="https://thunterweb.apphb.com/Scripts/jquery-1.8.2.js"></script>
+    <script src="https://thunterweb.apphb.com/Scripts/jquery-ui-1.10.3.js"></script>
+    <script src="https://thunterweb.apphb.com/Scripts/jquery.signalR-2.0.1.js"></script>
+    <script src="https://thunterweb.apphb.com/SignalR/hubs"></script>
 
     var chat = $.connection.chatmessages;
          var pname = '<%=Hiddenfield1%>';
@@ -906,12 +906,12 @@ Public Class Playersdetails
                             showendresult == 1;
                         }
                         else if (mydivs == 3) {
-                            window.location.href = "https://treasurehunterweb.apphb.com/fbbuy.html";
+                            window.location.href = "https://thunterweb.apphb.com/fbbuy.html";
                             showfailure == 1;
                             showendresult == 1;
                         }
                         else if (mydivs == 2) {
-                            window.location.href = "https://treasurehunterweb.apphb.com/gamesettings.aspx";
+                            window.location.href = "https://thunterweb.apphb.com/gamesettings.aspx";
                             showfailure == 1;
                             showendresult == 1;
                         }
@@ -1118,7 +1118,7 @@ Public Class Playersdetails
                             var pvalue = '<%=upaid%>';
                             //if (enemyhits != null) {
                             //myframe.children.namedItem("Label4").setAttribute("value", enemyhits);
-                            //myframe.src = "https://treasurehunterweb.apphb.com/Play/jsresult/" + enemyhits;
+                            //myframe.src = "https://thunterweb.apphb.com/Play/jsresult/" + enemyhits;
                             // window.location.href("jsresult/" + enemyhits);
                             //if (pvalue == "yes") {
                             //document.getElementById("myframe").setAttribute("src", "updatecoins.aspx?coins=" + 
@@ -1190,7 +1190,7 @@ Public Class Playersdetails
                             window.location.href = " http://www.amazon.com/?tag=treasurehun05-20";
                         }
                         else if (mydivs == 2) {
-                            window.location.href = "https://treasurehunterweb.apphb.com/mid.html";
+                            window.location.href = "https://thunterweb.apphb.com/mid.html";
                         }
                         else if (mydivs == 1) {
                             document.getElementById('showspot').style.visibility = "visible";
@@ -1415,27 +1415,27 @@ Public Class Playersdetails
             function randomspots() {
                 var mytemp = Math.floor(Math.random() * (0 - 1) + 1);
                 if (mytemp == 0) {
-                    Image10.src = "https://treasurehunterweb.apphb.com/Images/crossmark.png";
+                    Image10.src = "https://thunterweb.apphb.com/Images/crossmark.png";
                 }
                 var mytemp = Math.floor(Math.random() * (0 - 1) + 1);
                 if (mytemp == 0) {
-                    Image9.src = "https://treasurehunterweb.apphb.com/Images/crossmark.png";
+                    Image9.src = "https://thunterweb.apphb.com/Images/crossmark.png";
                 }
                 var mytemp = Math.floor(Math.random() * (0 - 1) + 1);
                 if (mytemp == 0) {
-                    Image8.src = "https://treasurehunterweb.apphb.com/Images/crossmark.png";
+                    Image8.src = "https://thunterweb.apphb.com/Images/crossmark.png";
                 }
                 var mytemp = Math.floor(Math.random() * (0 - 1) + 1);
                 if (mytemp == 1) {
-                    Image6.src = "https://treasurehunterweb.apphb.com/Images/tick.png";
+                    Image6.src = "https://thunterweb.apphb.com/Images/tick.png";
                 }
                 var mytemp = Math.floor(Math.random() * (0 - 1) + 1);
                 if (mytemp == 1) {
-                    Image7.src = "https://treasurehunterweb.apphb.com/Images/tick.png";
+                    Image7.src = "https://thunterweb.apphb.com/Images/tick.png";
                 }
                 var mytemp = Math.floor(Math.random() * (0 - 1) + 1);
                 if (mytemp == 1) {
-                    Image8.src = "https://treasurehunterweb.apphb.com/Images/tick.png";
+                    Image8.src = "https://thunterweb.apphb.com/Images/tick.png";
                 }
             }
 
@@ -1608,7 +1608,7 @@ Coins You Collected Now are Also Lost!! ");
                             window.location.href = " http://www.amazon.com/?tag=treasurehun05-20";
                         }
                         else if (mydivs == 2) {
-                            window.location.href = "https://treasurehunterweb.apphb.com/mid.html";
+                            window.location.href = "https://thunterweb.apphb.com/mid.html";
                         }
                         else if (mydivs == 1) {
                             document.getElementById('showspot').style.visibility = "visible";
@@ -3346,7 +3346,7 @@ Math.round(e.clientY) < 130) {
               'me/treasure_huntermp:treasurespot',
               'post',
               {
-                  product: "https://treasurehunterweb.apphb.com/treasurespot.html"
+                  product: "https://thunterweb.apphb.com/treasurespot.html"
               },
               function (response) {
                   // handle the response
@@ -3384,7 +3384,7 @@ Math.round(e.clientY) < 130) {
             FB.ui({
                 method: 'feed',
                 redirect_uri: 'https://apps.facebook.com/treasure_huntermp',
-                link: 'https://treasurehunterweb.apphb.com/',
+                link: 'https://thunterweb.apphb.com/',
                 caption: 'Treasure Hunter 3D Multiplayer Game - Completed TreasureSpot ' + '<%=Label1.Text%>' + ' 
 
 Collected ' + '<%=points.Text%>' + 'Gold Coins',
@@ -3397,7 +3397,7 @@ Collected ' + '<%=points.Text%>' + 'Gold Coins',
             //var obj = {
             //    method: 'pay',
             //    action: 'purchaseitem',
-            //    product: 'https://treasurehunterweb.apphb.com/coin.html',
+            //    product: 'https://thunterweb.apphb.com/coin.html',
             //    request_id: 'tspot'
             //};
 
@@ -3405,7 +3405,7 @@ Collected ' + '<%=points.Text%>' + 'Gold Coins',
             //    actiontrspot();
             //});
             actiontrspot();
-            window.location.href = "https://treasurehunterweb.apphb.com/fbbuy.html";
+            window.location.href = "https://thunterweb.apphb.com/fbbuy.html";
         }
 
         document.getElementById('pay0').onclick = function () { buy() };
@@ -3414,14 +3414,14 @@ Collected ' + '<%=points.Text%>' + 'Gold Coins',
             //var obj = {
             //    method: 'pay',
             //    action: 'purchaseitem',
-            //    product: 'https://treasurehunterweb.apphb.com/tool.html',
+            //    product: 'https://thunterweb.apphb.com/tool.html',
             //    request_id: 'tool'
             //};
 
             //FB.ui(obj, function (data) {
             //    actiontbox();
             //});
-            window.location.href = "https://treasurehunterweb.apphb.com/fbbuy.html";
+            window.location.href = "https://thunterweb.apphb.com/fbbuy.html";
         }
 
         document.getElementById('pay3').onclick = function () { buyt() };
@@ -3430,7 +3430,7 @@ Collected ' + '<%=points.Text%>' + 'Gold Coins',
             //var obj = {
             //    method: 'pay',
             //    action: 'purchaseitem',
-            //    product: 'https://treasurehunterweb.apphb.com/life.html',
+            //    product: 'https://thunterweb.apphb.com/life.html',
             //    request_id: 'life'
             //};
 
@@ -3438,7 +3438,7 @@ Collected ' + '<%=points.Text%>' + 'Gold Coins',
             //    actionelifes();
             //});
             actionelifes();
-            window.location.href = "https://treasurehunterweb.apphb.com/fbbuy.html";
+            window.location.href = "https://thunterweb.apphb.com/fbbuy.html";
         }
 
         document.getElementById('pay').onclick = function () { buyl() };
@@ -3447,7 +3447,7 @@ Collected ' + '<%=points.Text%>' + 'Gold Coins',
             //var obj = {
             //    method: 'pay',
             //    action: 'purchaseitem',
-            //    product: 'https://treasurehunterweb.apphb.com/professional.html',
+            //    product: 'https://thunterweb.apphb.com/professional.html',
             //    request_id: 'prof'
             //};
 
@@ -3455,7 +3455,7 @@ Collected ' + '<%=points.Text%>' + 'Gold Coins',
             //    actionphelp();
             //});
             actionphelp();
-            window.location.href = "https://treasurehunterweb.apphb.com/fbbuy.html";
+            window.location.href = "https://thunterweb.apphb.com/fbbuy.html";
         }
 
         document.getElementById('pay2').onclick = function () { buyp() };
@@ -3587,7 +3587,7 @@ function (response) {
             //    method: 'apprequests',
             //    message: 'You are Invited to Play Treasure Hunter 3D MultiPlayer Game with me'
             //});
-            window.location.href = "https://treasurehunterweb.apphb.com/Invite/friends";
+            window.location.href = "https://thunterweb.apphb.com/Invite/friends";
         }
     </script>
     <script type="text/javascript">
@@ -3616,7 +3616,7 @@ function (response) {
             //        method: 'fbpromotion',
             //        display: 'popup',
             //        quantity: 1,
-            //        product: 'https://treasurehunterweb.apphb.com/coin.html'
+            //        product: 'https://thunterweb.apphb.com/coin.html'
             //    };
 
             //    FB.ui(obj, function () {
@@ -3629,7 +3629,7 @@ function (response) {
             //    // For subsequent clicks, alert user
             //    alert("Payer Promotion already clicked!");
             //}
-            window.location.href = "https://treasurehunterweb.apphb.com/fbpromo.html";
+            window.location.href = "https://thunterweb.apphb.com/fbpromo.html";
         }
     </script>
 
@@ -3651,7 +3651,7 @@ function (response) {
 
         <div style="width: 50%; height: 64%; z-index: 1000; left: 38%; top: 24%; visibility: hidden; position: absolute; background-color: #669999;"
             id="showwinner">
-            <img id="Img9" src="https://treasurehunterweb.apphb.com/Images/goldshower.gif" style="border: thin solid 
+            <img id="Img9" src="https://thunterweb.apphb.com/Images/goldshower.gif" style="border: thin solid 
 
 Transparent; width: 96%; height: 43%; top: 2%; left: 1%; z-index: 1001; position: absolute;" />
             <asp:Label ID="Label22" runat="server" Style="z-index: 1001; left: 3%; top: 70%; position: absolute; vertical-align: middle; text-align: center; width: 62%; height: 7%"
@@ -3728,7 +3728,7 @@ align: middle; text-align: center; width: 18%; height: 10%;"
                 Text="Price   $2" ForeColor="White" Font-Bold="True"
                 Font-Size="100%"></asp:Label>
             <asp:HyperLink ID="Hyperlink7" runat="server" Font-Underline="False"
-                NavigateUrl="https://treasurehunterweb.apphb.com/mid.html" Style="z-index: 1001; border-radius: 2%; background-
+                NavigateUrl="https://thunterweb.apphb.com/mid.html" Style="z-index: 1001; border-radius: 2%; background-
 
 color: #0000FF; top: 37%; position: absolute; height: 7%; width: 64%; left: 23%; text-align: center; vertical-align: middle;"
                 Target="_self" ForeColor="#FFCC00" meta:resourcekey="Hyperlink1Resource1"
@@ -3738,18 +3738,18 @@ color: #0000FF; top: 37%; position: absolute; height: 7%; width: 64%; left: 23%;
                 Back to Game
             </button>
             <asp:HyperLink ID="Hyperlink12" runat="server" Font-Underline="False"
-                NavigateUrl="https://treasurehunterweb.apphb.com/trialpay.aspx" Style="z-index: 1; left: 23%; top: 49%; position: absolute; border-radius: 2%; background-color: #FF9900; width: 26%; height: 14%; cursor: pointer; text-
+                NavigateUrl="https://thunterweb.apphb.com/trialpay.aspx" Style="z-index: 1; left: 23%; top: 49%; position: absolute; border-radius: 2%; background-color: #FF9900; width: 26%; height: 14%; cursor: pointer; text-
 
 decoration: none;"
                 Target="_blank" ForeColor="White" BackColor="#FF9900"
-                ImageUrl="https://treasurehunterweb.apphb.com/Images/trialpay.jpg"></asp:HyperLink>
+                ImageUrl="https://thunterweb.apphb.com/Images/trialpay.jpg"></asp:HyperLink>
             <asp:Label ID="Label23" runat="server" Style="z-index: 1001; left: 52%; top: 50%; position: absolute; vertical-align: middle; text-align: center; width: 39%; height: 13%;"
                 Text="(Offer Claims Enabled. Earn Free Credits 
 
 to Buy)"
                 ForeColor="White" Font-Bold="True" Font-Size="100%"></asp:Label>
             <asp:HyperLink ID="Hyperlink13" runat="server" Font-Underline="False"
-                NavigateUrl="https://treasurehunterweb.apphb.com/mid.html" Style="z-index: 1; left: 18%; top: 68%; position: absolute; border-radius: 2%; background-color: #FF9900; width: 36%; height: 14%; cursor: pointer; text-
+                NavigateUrl="https://thunterweb.apphb.com/mid.html" Style="z-index: 1; left: 18%; top: 68%; position: absolute; border-radius: 2%; background-color: #FF9900; width: 36%; height: 14%; cursor: pointer; text-
 
 decoration: none;"
                 Target="_blank" ForeColor="White" BackColor="#FF9900"
@@ -3801,7 +3801,7 @@ During Game Playing. Buy to Clear the Level."
                 Text="Price   $1" ForeColor="White"
                 Font-Bold="True"></asp:Label>
             <asp:HyperLink ID="Hyperlink10" runat="server" Font-Underline="False"
-                NavigateUrl="https://treasurehunterweb.apphb.com/mid.html" Style="z-index: 1001; border-radius: 15px; background-color: #0000FF; top: 254px; position: absolute; height: 22px; width: 170px; left: 21px; text-align: center; vertical-align: middle;"
+                NavigateUrl="https://thunterweb.apphb.com/mid.html" Style="z-index: 1001; border-radius: 15px; background-color: #0000FF; top: 254px; position: absolute; height: 22px; width: 170px; left: 21px; text-align: center; vertical-align: middle;"
                 Target="_self" ForeColor="#FFCC00" meta:resourcekey="Hyperlink1Resource1"
                 ViewStateMode="Enabled">Buy Additional Lifes</asp:HyperLink>
             <button id="Button7" style="z-index: 1001; border-radius: 10px; text-align: center; vertical-align: middle; border: medium outset #FFFF00; position: absolute; width: 162px; height: 39px; background-color: #FF00FF; color: #FFFFFF; top: 234px; left: 234px;"
@@ -3847,7 +3847,7 @@ Game Items to your TreasureSpot."
                 Text="Price   $1"
                 ForeColor="White" Font-Bold="True"></asp:Label>
             <asp:HyperLink ID="Hyperlink11" runat="server" Font-Size="100%" Font-Underline="False"
-                NavigateUrl="https://treasurehunterweb.apphb.com/mid.html" Style="z-index: 1001; border-radius: 2%; background-
+                NavigateUrl="https://thunterweb.apphb.com/mid.html" Style="z-index: 1001; border-radius: 2%; background-
 
 color: #0000FF; top: 54%; position: absolute; height: 8%; width: 45%; left: 4%; text-align: center; vertical-align: middle;"
                 Target="_self" ForeColor="#FFCC00" meta:resourcekey="Hyperlink1Resource1"
@@ -3954,11 +3954,11 @@ ccounter) Values (@uname, @ccounter)"
 
 
         <asp:Button ID="Button1" runat="server" ClientIDMode="Static"
-            PostBackUrl="https://treasurehunterweb.apphb.com/Index1.aspx" Style="z-index: 1; left: 15%; top: 15%; position: absolute; display: none"
+            PostBackUrl="https://thunterweb.apphb.com/Index1.aspx" Style="z-index: 1; left: 15%; top: 15%; position: absolute; display: none"
             Text="Button" CausesValidation="False" />
 
 
-        <a href="https://treasurehunterweb.apphb.com/prizes.html" target="_self" style="position: absolute; left: 70%; top: 95%; width: 10%; height: 4%; text-decoration: none; background-color: #FF00FF; color: #FFFFFF; border-
+        <a href="https://thunterweb.apphb.com/prizes.html" target="_self" style="position: absolute; left: 70%; top: 95%; width: 10%; height: 4%; text-decoration: none; background-color: #FF00FF; color: #FFFFFF; border-
 
 radius: 20%; text-align: center; z-index: 1; font-size: 100%;">Rewards</a>
         <asp:Label ID="Label1" runat="server" Font-Bold="True" Font-Size="100%" ForeColor="#9999FF" Style="z-
@@ -3975,13 +3975,13 @@ movement, click or 's' for functions"
             meta:resourcekey="Label2Resource1"></asp:Label>
 
         <asp:HyperLink ID="Hyperlink1" runat="server" Font-Underline="False"
-            NavigateUrl="https://treasurehunterweb.apphb.com/buy.aspx" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #0000FF; top: 6%; position: absolute; height: 4%; width: 13%; left: 2%;"
+            NavigateUrl="https://thunterweb.apphb.com/buy.aspx" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #0000FF; top: 6%; position: absolute; height: 4%; width: 13%; left: 2%;"
             Target="_self" Font-Size="100%" ForeColor="#FFCC00" ViewStateMode="Enabled">Increase Your Level</asp:HyperLink>
 
         <asp:HyperLink ID="Hyperlink3" runat="server" Font-Underline="False"
-            NavigateUrl="https://treasurehunterweb.apphb.com/friends.aspx" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #0000FF; left: 16%; top: 11%; width: 9%; height: 4%; position: absolute" Target="_self" ForeColor="#FFCC00" ViewStateMode="Enabled" Font-Size="100%">InviteFriends</asp:HyperLink>
+            NavigateUrl="https://thunterweb.apphb.com/friends.aspx" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #0000FF; left: 16%; top: 11%; width: 9%; height: 4%; position: absolute" Target="_self" ForeColor="#FFCC00" ViewStateMode="Enabled" Font-Size="100%">InviteFriends</asp:HyperLink>
 
-        <asp:HyperLink ID="Hyperlink5" runat="server" Font-Underline="False" NavigateUrl="https://treasurehunterweb.apphb.com/winners.aspx" Font-Size="100%" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #FF9900; left: 81%; top: 95%; position: absolute; height: 4%; width: 7%;" Target="_self" ForeColor="White">Winners</asp:HyperLink>
+        <asp:HyperLink ID="Hyperlink5" runat="server" Font-Underline="False" NavigateUrl="https://thunterweb.apphb.com/winners.aspx" Font-Size="100%" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #FF9900; left: 81%; top: 95%; position: absolute; height: 4%; width: 7%;" Target="_self" ForeColor="White">Winners</asp:HyperLink>
 
 
 
@@ -4066,7 +4066,7 @@ align: middle; color: #FFCC00; font-family: 'Jokerman LET'; font-size: 70%;">
 
         <input id="friendname" style="visibility: visible; text-decoration: none; height: 77px; background-color: transparent; color: #FFCC00; z-index: 1; position: absolute; left: 1%; top: 36%; width: 9%; height: 13%; cursor: none;"
             type="text" readonly="true" />
-        <img alt="" src="https://treasurehunterweb.apphb.com/Images/landscape.jpg" style="width: 9%; height: 10%; visibility: visible; z-index: 1; left: 1%; top: 24%; position: absolute;"
+        <img alt="" src="https://thunterweb.apphb.com/Images/landscape.jpg" style="width: 9%; height: 10%; visibility: visible; z-index: 1; left: 1%; top: 24%; position: absolute;"
             id="friendimage" />
         <label style="position: absolute; top: 64%; left: 1%; height: 3%; color: #FFFFFF; font-family: Script; font-size: 70%; width: 12%;">
             Talk to other Players
@@ -4088,7 +4088,7 @@ index: 1; position: absolute; left: 30%; top: 90%; width: 5%; height: 4%; border
 
 (event);" />
         <div id="aimg" style="position: absolute; left: 11%; top: 18%; width: 25%; height: 34%;">
-            <img alt="" src="https://treasurehunterweb.apphb.com/Images/achievements.gif" style="width: 236px; height: 188px; visibility: visible; z-index: 300; left: 0px; top: 0px; position: absolute; bottom: 10px; background-color: Transparent;"
+            <img alt="" src="https://thunterweb.apphb.com/Images/achievements.gif" style="width: 236px; height: 188px; visibility: visible; z-index: 300; left: 0px; top: 0px; position: absolute; bottom: 10px; background-color: Transparent;"
                 id="Img6" />
             <img id="Image1" style="z-index: 300; left: 82px; top: 101px; position: absolute; width: 36px; height: 39px;"
                 src='<%=one1%>' />
@@ -4102,15 +4102,15 @@ index: 1; position: absolute; left: 30%; top: 90%; width: 5%; height: 4%; border
                 src='<%=one5%>' />
 
             <img id="Image6" style="z-index: 301; left: 81px; top: 158px; position: absolute; width: 18px; height: 18px;"
-                src="https://treasurehunterweb.apphb.com/Images/tick.png" />
+                src="https://thunterweb.apphb.com/Images/tick.png" />
             <img id="Image7" style="z-index: 301; left: 124px; top: 103px; position: absolute; width: 16px; height: 17px;"
-                src="https://treasurehunterweb.apphb.com/Images/tick.png" />
+                src="https://thunterweb.apphb.com/Images/tick.png" />
             <img id="Image8" style="z-index: 301; left: 152px; top: 67px; position: absolute; width: 20px; height: 21px;"
-                src="https://treasurehunterweb.apphb.com/Images/tick.png" />
+                src="https://thunterweb.apphb.com/Images/tick.png" />
             <img id="Image9" style="z-index: 301; left: 201px; top: 44px; position: absolute; width: 18px; height: 18px;"
-                src="https://treasurehunterweb.apphb.com/Images/tick.png" />
+                src="https://thunterweb.apphb.com/Images/tick.png" />
             <img id="Image10" style="z-index: 301; left: 178px; top: 3px; position: absolute; width: 18px; height: 18px;"
-                src="https://treasurehunterweb.apphb.com/Images/tick.png" />
+                src="https://thunterweb.apphb.com/Images/tick.png" />
         </div>
         <div id="tooltip" style="position: absolute; top: 218px; left: 494px; width: 107px; height: 104px; visibility: hidden;">
             <input type="text" id="playername" style="position: absolute; text-decoration: none; background-color: transparent; top: 11px; left: 20px; width: 60px; height: 47px;" />
@@ -4222,7 +4222,7 @@ align: center; vertical-align: middle;"
 
 will be lost. Buy a TreasureSpot"></asp:TextBox>
 
-        <img id="Img7" src="https://treasurehunterweb.apphb.com/Images/goldcoin.gif" style="border: thin solid 
+        <img id="Img7" src="https://thunterweb.apphb.com/Images/goldcoin.gif" style="border: thin solid 
 
 Transparent; left: 32%; top: 54%; position: absolute; width: 2%; height: 3%; z-index: 21; visibility: visible;">
         <img id="Img8" src='<%=ctrl1mainurl%>' style="border: thin solid Transparent; left: 33%; top: 63%; position: absolute; width: 2%; height: 3%; z-index: 21; visibility: visible;">

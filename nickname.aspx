@@ -32,14 +32,16 @@ protected void Button1_Click(object sender, EventArgs e)
         //SqlDataSource1.InsertParameters["amount"].DefaultValue = "0";
         //SqlDataSource1.InsertParameters["currenttspot"].DefaultValue = "";
 
-        SqlDataSource1.InsertCommand = "INSERT INTO appuserdetails(uname, uloggedin, winner, wintimes, paid, amount, currenttspot, device, logindate, logintime, levels) VALUES ('" + TextBox1.Text + "', 'no', 'no', '0', 'no', '0', '', 'web'," + "'" + System.DateTime.Now.Date + "'," + "'" + System.DateTime.Now.TimeOfDay + "'," + "'1'" + ")";
+        SqlDataSource1.InsertCommand = "INSERT INTO appuserdetails(uname, uloggedin, winner, wintimes, paid, amount, currenttspot, device, logindate, logintime, levels, luid) VALUES ('" + TextBox1.Text + "', 'no', 'no', '0', 'no', '0', '', 'web'," + "'" + System.DateTime.Now.Date + "'," + "'" + System.DateTime.Now.TimeOfDay + "'," + "'1' " + "'" + TextBox2.Text + "'")";
         SqlDataSource1.Insert();
         Session["loggeduser"] = TextBox1.Text;
+
+	
     }
     else if (dt.Rows.Count != 0)
     {
         Session["loggeduser"] = TextBox1.Text;
-        Response.Redirect("https://treasurehunterweb.apphb.com/index1.aspx");
+        Response.Redirect("https://thunterweb.apphb.com/index1.aspx");
     }
 }
 </script>
@@ -59,15 +61,7 @@ protected void Button1_Click(object sender, EventArgs e)
         
         <asp:Button ID="Button1" runat="server" style="z-index: 1; left: 405px; top: 370px; position: absolute; height: 26px; width: 140px" Text="ENTER GAME" ForeColor="Blue" OnClick="Button1_Click" />
       
-            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=c9ddedcf-4582-4aa0-b614-a4710054b560
-
-4d58-947e-a0ba00796278.sqlserver.sequelizer.com;Initial 
-
-Catalog=db9cd6799a6dac4d58947ea0ba00796278;Persist Security Info=True;User 
-
-ID=tddputngypufyqqp;Password=EkBRetznpcHA57dLkka8JPnfM84wFhkpLctYThhwe6CpjHUMyMN4dDrX7veeyc
-
-Nh" SelectCommand="SELECT * FROM appuserdetails" InsertCommand="INSERT INTO loggedusers(luname, luid, 
+            <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:c9ddedcf-4582-4aa0-b614-a4710054b560ConnectionString %>" SelectCommand="SELECT * FROM appuserdetails" InsertCommand="INSERT INTO loggedusers(luname, luid, 
 
 luposition, luimg, luspriteimg, lucrisboos, luloggedin, lutspots, lulogintimes, luinvites) Values (@luname, @luid, 
 
