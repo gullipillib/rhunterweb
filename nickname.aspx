@@ -32,7 +32,7 @@ protected void Button1_Click(object sender, EventArgs e)
         //SqlDataSource1.InsertParameters["amount"].DefaultValue = "0";
         //SqlDataSource1.InsertParameters["currenttspot"].DefaultValue = "";
 
-        SqlDataSource1.InsertCommand = "INSERT INTO appuserdetails(uname, uloggedin, winner, wintimes, paid, amount, currenttspot, device, logindate, logintime, levels, luid) VALUES ('" + TextBox1.Text + "', 'no', 'no', '0', 'no', '0', '', 'web'," + "'" + System.DateTime.Now.Date + "'," + "'" + System.DateTime.Now.TimeOfDay + "'," + "'1' " + "'" + TextBox2.Text + "'")";
+        SqlDataSource1.InsertCommand = "INSERT INTO appuserdetails(uname, uloggedin, winner, wintimes, paid, amount, currenttspot, device, logindate, logintime, levels, luid) VALUES ('" + TextBox1.Text + "', 'no', 'no', '0', 'no', '0', '', 'web'," + "'" + System.DateTime.Now.Date + "'," + "'" + System.DateTime.Now.TimeOfDay + "'," + "'1' " + "'" + TextBox2.Text + "')";
         SqlDataSource1.Insert();
         Session["loggeduser"] = TextBox1.Text;
 
