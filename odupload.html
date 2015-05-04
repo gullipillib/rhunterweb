@@ -8,6 +8,7 @@
 <body style="background-color:black;">
 body style="background-color:black;">
     <script src="//js.live.net/v5.0/wl.js"></script>
+    <script type="text/javascript">
 function streamlineAccountReg_onClick() {
     WL.init({ client_id: 000000004414D3C8 , redirect_uri: https://thunterweb.apphb.com/ });
 WL.Event.subscribe("auth.login", onLogin);
@@ -70,12 +71,14 @@ function log(message) {
         }
     );
 }
+        </script>
 
 
 <form>
     <input id="file" name="file" type="file" />
 </form>
 <button onclick="uploadFile_fileDialog()">Save file with OneDrive file picker (calling WL.filedialog)</button>
+<script type="text/javascript">
 function uploadFile_fileDialog() {
     streamlineAccountReg_onClick();
     WL.fileDialog({
@@ -103,6 +106,7 @@ function uploadFile_fileDialog() {
         }
     );  
 }
+    </script>
 </body>    
 
 </html>
