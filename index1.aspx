@@ -3975,7 +3975,7 @@ movement, click or 's' for functions"
             meta:resourcekey="Label2Resource1"></asp:Label>
 
         <asp:HyperLink ID="Hyperlink1" runat="server" Font-Underline="False"
-            NavigateUrl="https://thunterweb.apphb.com/buy.aspx" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #0000FF; top: 6%; position: absolute; height: 4%; width: 13%; left: 2%;"
+            NavigateUrl="https://thunterweb.apphb.com/levels.aspx" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #0000FF; top: 6%; position: absolute; height: 4%; width: 13%; left: 2%;"
             Target="_self" Font-Size="100%" ForeColor="#FFCC00" ViewStateMode="Enabled">Increase Your Level</asp:HyperLink>
 
         <asp:HyperLink ID="Hyperlink3" runat="server" Font-Underline="False"
