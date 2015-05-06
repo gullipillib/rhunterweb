@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" %>
+﻿<%@ Page Language="C#"  Debug="true"%>
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="System.Data.OleDb" %>
 <%@ Import Namespace="System.Data.SqlClient" %>
@@ -11,7 +11,7 @@
 protected void Button1_Click(object sender, EventArgs e)
 {
     //Insert User into appuser,loggeduser,ordercounter,treasureprize;
-    SqlDataSource1.SelectCommand = "SELECT uname FROM appuserdetails WHERE (uname = '" + TextBox1.Text + "')";
+    SqlDataSource1.SelectCommand = "SELECT * FROM appuserdetails WHERE (uname = '" + TextBox1.Text + "')";
 
     DataView dv = (DataView)SqlDataSource1.Select(DataSourceSelectArguments.Empty);
     DataTable dt = new DataTable();
@@ -32,13 +32,13 @@ protected void Button1_Click(object sender, EventArgs e)
         //SqlDataSource1.InsertParameters["amount"].DefaultValue = "0";
         //SqlDataSource1.InsertParameters["currenttspot"].DefaultValue = "";
 
-        SqlDataSource1.InsertCommand = "INSERT INTO appuserdetails(uname, uloggedin, winner, wintimes, paid, amount, currenttspot, device, logindate, logintime, levels, luid) VALUES ('" + TextBox1.Text + "', 'no', 'no', '0', 'no', '0', '', 'web'," + "'" + System.DateTime.Now.Date + "'," + "'" + System.DateTime.Now.TimeOfDay + "'," + "'1' " + "'" + TextBox2.Text + "')";
+        SqlDataSource1.InsertCommand = "INSERT INTO appuserdetails(uname, uloggedin, winner, wintimes, paid, amount, currenttspot, device, logindate, logintime, levels) VALUES ('" + TextBox1.Text + "', 'no', 'no', '0', '" + TextBox2.Text + "', 'no', '1', 'web'," + "'" + System.DateTime.Now.Date + "'," + "'" + System.DateTime.Now.TimeOfDay + "'," + "'1')";
         SqlDataSource1.Insert();
         Session["loggeduser"] = TextBox1.Text;
-
+        Response.Redirect("https://thunterweb.apphb.com/index1.aspx");
 	
     }
-    else if (dt.Rows.Count != 0)
+    else if (dt.Rows.Count != 0 && TextBox2.Text == dt.Rows[0].Field<string>("paid"))
     {
         Session["loggeduser"] = TextBox1.Text;
         Response.Redirect("https://thunterweb.apphb.com/index1.aspx");
