@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" %>
+﻿<%@ Page Language="C#" Debug="true" %>
 
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="System.Data.OleDb" %>
@@ -368,7 +368,7 @@ Public Class Playersdetails
             }
             catch (Exception e)
             {
-                Response.Redirect("https://thunterweb.apphb.com/Home/Index1");
+                Response.Redirect("https://thunterweb.apphb.com/Index1.aspx");
 
             }
         }
@@ -552,14 +552,14 @@ Public Class Playersdetails
 
                 if (Convert.ToString(Session["reached"]) == "no")
                 {
-                    Response.Redirect("https://thunterweb.apphb.com/Home/Index1");
+                    Response.Redirect("https://thunterweb.apphb.com/Index1.aspx");
                 }
             }
             else if (Session["reached"] != null)
             {
                 if (Convert.ToString(Session["reached"]) == "no")
                 {
-                    Response.Redirect("https://thunterweb.apphb.com/Home/Index1");
+                    Response.Redirect("https://thunterweb.apphb.com/Index1.aspx");
                 }
             }
             checkusername();
@@ -3981,8 +3981,6 @@ movement, click or 's' for functions"
         <asp:HyperLink ID="Hyperlink3" runat="server" Font-Underline="False"
             NavigateUrl="https://thunterweb.apphb.com/friends.aspx" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #0000FF; left: 16%; top: 11%; width: 9%; height: 4%; position: absolute" Target="_self" ForeColor="#FFCC00" ViewStateMode="Enabled" Font-Size="100%">InviteFriends</asp:HyperLink>
 
-        <asp:HyperLink ID="Hyperlink5" runat="server" Font-Underline="False" NavigateUrl="https://thunterweb.apphb.com/winners.aspx" Font-Size="100%" Style="text-align: center; vertical-align: middle; z-index: 1; border-radius: 15px; background-color: #FF9900; left: 81%; top: 95%; position: absolute; height: 4%; width: 7%;" Target="_self" ForeColor="White">Winners</asp:HyperLink>
-
 
 
         <asp:TextBox ID="ehits" runat="server" BackColor="Transparent" BorderStyle="None" ClientIDMode="Static" ReadOnly="True" Style="z-index: 1; left: 12%; top: 1%; position: absolute; width: 6%; height: 3%;" ForeColor="#FFCC00" ViewStateMode="Enabled" Font-Size="100%">0</asp:TextBox>
@@ -4077,7 +4075,7 @@ align: middle; color: #FFCC00; font-family: 'Jokerman LET'; font-size: 70%;">
 index: 1; position: absolute; left: 30%; top: 90%; width: 5%; height: 4%; border-radius: 20%;"
             type="button"
             value="Send" onclick="send2server();" />
-        <div style="border-left: 15px ridge #99FF99; border-right: 1px solid #99FF99; border-top: 15px ridge #99FF99; border-bottom: 1px solid #99FF99; z-index: 1; position: absolute; left: 83%; top: 67%; background-color: Transparent; color: #FFCC00; width: 15%; height: 19%;">
+        <div style="border-left: 15px ridge #99FF99; border-right: 1px solid #99FF99; border-top: 15px ridge #99FF99; border-bottom: 1px solid #99FF99; z-index: 1; position: absolute; left: 83%; top: 67%; background-color: Transparent; color: #FFCC00; width: 15%; height: 19%; border-width: 15px; border-color: #006600;">
         </div>
         <div style="position: absolute; z-index: 210; position: absolute; left: 1%; top: 67%; width: 35%; height: 20%; overflow: hidden; cursor: crosshair;">
             <textarea id="Text2" class="TextArea1" style="border: 15px ridge #99FF99; position: absolute; left: 0%; top: 0%; background-color: Transparent; color: #FFCC00; width: 103%; height: 82%;"
@@ -4124,13 +4122,13 @@ index: 1; position: absolute; left: 30%; top: 90%; width: 5%; height: 4%; border
             ClientIDMode="Static" Style="z-index: 1; left: 41%; top: 21%; position: absolute; width: 37%; height: 5%"
             ForeColor="White" ReadOnly="true">  </asp:TextBox>
         <asp:TextBox ID="TextBox1" runat="server" BackColor="Transparent" BorderStyle="None"
-            ClientIDMode="Static" Style="z-index: 1; left: 90%; top: 95%; position: absolute; width: 11%; height: 4%; text-
+            ClientIDMode="Static" Style="z-index: 1; left: 70%; top: 5%; position: absolute; width: 11%; height: 4%; text-
 
 align: center; vertical-align: middle;"
             ForeColor="#FFCC00" meta:resourcekey="pointsResource1" ReadOnly="false"
             Font-Names="OldDreadfulNo7 BT" Font-Size="90%">Time Remaining</asp:TextBox>
         <asp:TextBox ID="TextBox2" runat="server" BackColor="Transparent" BorderStyle="None"
-            ClientIDMode="Static" Style="z-index: 1; left: 91%; top: 99%; position: absolute; width: 7%; height: 4%; text-
+            ClientIDMode="Static" Style="z-index: 1; left: 94%; top: 5%; position: absolute; width: 7%; height: 4%; text-
 
 align: center; vertical-align: middle;"
             ForeColor="#FFCC00" meta:resourcekey="pointsResource1"

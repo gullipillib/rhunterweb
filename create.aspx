@@ -1,9 +1,11 @@
-﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage" EnableViewState="true" AutoEventWireup="true" %>
+﻿<%@ Page Language="C#"   Debug="true" %>
 
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="System.Data.SqlClient" %>
 <%@ Import Namespace="System.Configuration" %>
-<%@ Import Namespace="Amazon" %>
+
+<%@ Import Namespace="System.Web.Helpers" %>
+
 
 <!DOCTYPE html>
 
@@ -63,7 +65,6 @@
     string HiddenField5;
     static int controlcounter;
 
-    Amazon.S3.Transfer.TransferUtility myamazon = new Amazon.S3.Transfer.TransferUtility("AKIAI5IS4PP5UOPOWWLA", "nT5jivR2QTCMaUjC2+XUX+c/ca11C86zMxMtdTs6");
     
     protected void checkusername()
     {
@@ -109,7 +110,7 @@
         else
         {
 
-            Response.Redirect("~/buy.aspx");
+            //Response.Redirect("~/buy.aspx");
         }
     }
 
@@ -125,7 +126,7 @@
         //Label3.Text = dt.Rows[0][0].ToString();
         if (dt.Rows.Count == 0)
         {
-            Response.Redirect("~/buy.aspx");
+            //Response.Redirect("~/buy.aspx");
         }
     }
 
@@ -198,7 +199,7 @@
                 Button5.Enabled = true;
                 Button4.Enabled = false;
                 TextBox1.Enabled = false;
-                TextBox2.Enabled = false;
+                TextBox2.Enabled = true;
                 GridView1.Enabled = false;
                 GridView2.Enabled = false;
                 GridView3.Enabled = false;
@@ -1037,9 +1038,9 @@
 
     protected void Button14_Click(object sender, EventArgs e)
     {
-        myamazon.Upload(FileUpload1.FileName, "treasurehunter");
-        TextBox2.Text = FileUpload1.FileName;
-        Button14.Enabled = false;
+        
+        //TextBox2.Text = FileUpload1.FileName;
+        //Button14.Enabled = false;
         
     }
 </script>
@@ -1080,7 +1081,7 @@
         <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:c9ddedcf-4582-4aa0-b614-a4710054b560ConnectionString %>" SelectCommand="SELECT tbname, tbtoolscategory,  tbcategory, tbactive, tbdetails, tbimgurl FROM toolbox WHERE (tbactive = 'yes') and (tbcategory = 'water')"></asp:SqlDataSource>
             
            
-    <a href="creatorhelp.aspx" target="_self" style="position: absolute; left: 504px; top: 487px; width: 86px; text-decoration: none; background-color: #0000FF; color:blue"> Help </a>
+    <a href="creatorhelp.aspx" target="_self" style="position: absolute; left: 527px; top: 483px; width: 33px; text-decoration: none; background-color: #0000FF; color:white; height: 23px;"> Help </a>
             
            
         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/toc.aspx" style="z-index: 1; left: 567px; top: 26px; position: absolute" Target="_blank">Terms and Conditions</asp:HyperLink>
@@ -1253,7 +1254,7 @@
             </asp:Panel>
         <asp:Panel runat="server" ID="Panel7">
         <asp:TextBox ID="TextBox1" runat="server" Style="z-index: 1; left: 523px; top: 151px; position: absolute; width: 168px; height: 24px" ClientIDMode="Static" ViewStateMode="Enabled" OnTextChanged="TextBox1_TextChanged1" ToolTip="less than 50 chars only"></asp:TextBox>
-        <asp:TextBox ID="TextBox2" runat="server" Style="z-index: 1; left: 95px; top: 468px; position: absolute; width: 388px; height: 24px" ClientIDMode="Static" ViewStateMode="Enabled" OnTextChanged="TextBox2_TextChanged1" ToolTip="Enter Only Youtube Video ID" ReadOnly="True"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" Style="z-index: 1; left: 95px; top: 468px; position: absolute; width: 388px; height: 24px" ClientIDMode="Static" ViewStateMode="Enabled" OnTextChanged="TextBox2_TextChanged1" ToolTip="Enter Video Url" ></asp:TextBox>
         <asp:Button ID="Button4" runat="server" BackColor="Blue" ForeColor="White" Style="z-index: 1; left: 516px; top: 528px; position: absolute; height: 26px; cursor:pointer;" Text="Finalize" ToolTip="Only after all the fields are completed, finalization takes place" OnClick="Button4_Click" Enabled="False" ClientIDMode="Static" UseSubmitBehavior="False" />
         <asp:Button ID="Button5" runat="server" BackColor="Blue" ForeColor="White" Style="z-index: 1; left: 777px; top: 6px; position: absolute; height: 26px; bottom: 561px; cursor:pointer;" Text="Back to Game" ToolTip="Only after all the fields are completed, finalization takes place" Enabled="False" PostBackUrl="index1.aspx" />
         <asp:Button ID="Button6" runat="server" Style="z-index: 1; left: 667px; top: 355px; position: absolute; bottom: 188px; width: 71px; height:40px;" Text="Add" OnClick="Button6_Click" ClientIDMode="Static" CausesValidation="False" Enabled="False" Height="40px" Width="70px" UseSubmitBehavior="False" />

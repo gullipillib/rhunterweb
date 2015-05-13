@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" %>
+﻿<%@ Page Language="VB"   Debug="true" %>
 
 <!DOCTYPE html>
 

@@ -2,7 +2,7 @@
 <%@ Import Namespace="System.Data" %>
 <%@ Import Namespace="System.Data.SqlClient" %>
 <%@ Import Namespace="System.Configuration" %>
-<%@ Import Namespace="Amazon" %>
+
 
 <!DOCTYPE html>
 
@@ -17,8 +17,7 @@
     string HiddenField3;
     string HiddenField4;
     string HiddenField5;
-    Amazon.S3.Transfer.TransferUtility myamazon = new Amazon.S3.Transfer.TransferUtility("AKIAI5IS4PP5UOPOWWLA", "nT5jivR2QTCMaUjC2+XUX+c/ca11C86zMxMtdTs6");
-
+    
     protected void checkusername()
     {
         Hiddenfield1 = Convert.ToString(Session["loggeduser"]);
@@ -59,7 +58,7 @@
         else
         {
 
-            Response.Redirect("~/buy.aspx");
+            Response.Redirect("~/index1.aspx");
         }
     }
 
@@ -191,7 +190,7 @@
 
     protected void Button5_Click(object sender, EventArgs e)
     {
-        Response.Redirect("~/play.aspx");
+        Response.Redirect("~/index1.aspx");
     }
 
 
@@ -213,22 +212,22 @@
 
     protected void Button6_Click(object sender, EventArgs e)
     {
-        myamazon.Upload(FileUpload1.FileName, "treasurehunter");
-        TextBox2.Text = FileUpload1.FileName;
+        //myamazon.Upload(FileUpload1.FileName, "treasurehunter");
+        //TextBox2.Text = FileUpload1.FileName;
         Button6.Enabled = false;
     }
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        myamazon.Upload(FileUpload2.FileName, "treasurehunter");
-        TextBox3.Text = FileUpload2.FileName;
+        //myamazon.Upload(FileUpload2.FileName, "treasurehunter");
+        //TextBox3.Text = FileUpload2.FileName;
         Button1.Enabled = false;
     }
 
     protected void Button2_Click(object sender, EventArgs e)
     {
-        myamazon.Upload(FileUpload3.FileName, "treasurehunter");
-        TextBox3.Text = FileUpload3.FileName;
+        //myamazon.Upload(FileUpload3.FileName, "treasurehunter");
+        //TextBox3.Text = FileUpload3.FileName;
         Button2.Enabled = false;
     }
 </script>
@@ -236,7 +235,7 @@
 <html>
 <head runat="server">
     <meta name="viewport" content="width=device-width" />
-    <title>tools</title>
+    <title>Tools</title>
     
 </head>
     
@@ -247,7 +246,9 @@
    <form id="form1" runat="server">
  <asp:Label ID="Label14" runat="server" style="z-index: 1; left: 709px; top: 12px; position: absolute; height: 21px; width: 172px" Text="Label"></asp:Label>
      
+ <asp:Label ID="Label16" runat="server" style="z-index: 1; left: 719px; top: 268px; position: absolute; height: 49px; width: 271px" Text="Upload Images to OneDrive or Google Drive or Amazon S3 its Free!"></asp:Label>
    
+
         <asp:Label ID="Label7" runat="server" Font-Bold="True" Font-Size="20pt" style="z-index: 1; left: 251px; top: 12px; position: absolute; height: 21px" Text="Treasure Hunter Tool Box Creator"></asp:Label>
        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:c9ddedcf-4582-4aa0-b614-a4710054b560ConnectionString %>" SelectCommand="SELECT uname FROM appuserdetails WHERE (uname = '<%=Hiddenfield1.Value%>')"></asp:SqlDataSource>
        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:c9ddedcf-4582-4aa0-b614-a4710054b560ConnectionString %>" SelectCommand="SELECT categoryname FROM category"></asp:SqlDataSource>
@@ -268,9 +269,9 @@
        <asp:FileUpload ID="FileUpload2" runat="server" BackColor="Blue" ForeColor="Red" style="z-index: 1; left: 648px; top: 333px; position: absolute" />
        <asp:FileUpload ID="FileUpload3" runat="server" BackColor="Blue" ForeColor="Red" style="z-index: 1; left: 648px; top: 413px; position: absolute" />
 
-<asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 250px; top: 235px; position: absolute; width: 385px; height: 24px" ToolTip="only png and gif file with transparent background, 100 x 120 and 30kb size only" ClientIDMode="Static" OnTextChanged="TextBox2_TextChanged" AutoPostBack="True" ReadOnly="True"></asp:TextBox>
-<asp:TextBox ID="TextBox3" runat="server" style="z-index: 1; left: 234px; top: 337px; position: absolute; width: 383px; height: 29px" ToolTip="only png and gif file with transparent background, 100 x 120 and 30kb size only" ClientIDMode="Static" OnTextChanged="TextBox3_TextChanged" AutoPostBack="True" ReadOnly="True"></asp:TextBox>
- <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 229px; top: 411px; position: absolute; width: 382px; height: 28px" ToolTip="only png and gif file with transparent background, 100 x 120 and 30kb size only" ClientIDMode="Static" OnTextChanged="TextBox4_TextChanged" AutoPostBack="True" ReadOnly="True"></asp:TextBox>
+<asp:TextBox ID="TextBox2" runat="server" style="z-index: 1; left: 250px; top: 235px; position: absolute; width: 385px; height: 24px" ToolTip="only png and gif file with transparent background, 100 x 120 and 30kb size only" ClientIDMode="Static" OnTextChanged="TextBox2_TextChanged" AutoPostBack="True" ReadOnly="False"></asp:TextBox>
+<asp:TextBox ID="TextBox3" runat="server" style="z-index: 1; left: 234px; top: 337px; position: absolute; width: 383px; height: 29px" ToolTip="only png and gif file with transparent background, 100 x 120 and 30kb size only" ClientIDMode="Static" OnTextChanged="TextBox3_TextChanged" AutoPostBack="True" ReadOnly="False"></asp:TextBox>
+ <asp:TextBox ID="TextBox4" runat="server" style="z-index: 1; left: 229px; top: 411px; position: absolute; width: 382px; height: 28px" ToolTip="only png and gif file with transparent background, 100 x 120 and 30kb size only" ClientIDMode="Static" OnTextChanged="TextBox4_TextChanged" AutoPostBack="True" ReadOnly="False"></asp:TextBox>
             
            
         <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/toc.aspx" style="z-index: 1; left: 711px; top: 130px; position: absolute" Target="_blank">Terms and Conditions</asp:HyperLink>
