@@ -10,6 +10,7 @@
 
 protected void Button1_Click(object sender, EventArgs e)
 {
+    Session["loggeduserurl"] = "https://thunterweb.apphb.com/images/150/jpg";
     //Insert User into appuser,loggeduser,ordercounter,treasureprize;
     SqlDataSource1.SelectCommand = "SELECT * FROM appuserdetails WHERE (uname = '" + TextBox1.Text + "')";
 
@@ -34,14 +35,27 @@ protected void Button1_Click(object sender, EventArgs e)
 
         SqlDataSource1.InsertCommand = "INSERT INTO appuserdetails(uname, uloggedin, winner, wintimes, paid, amount, currenttspot, device, logindate, logintime, levels) VALUES ('" + TextBox1.Text + "', 'no', 'no', '0', '" + TextBox2.Text + "', 'no', '1', 'web'," + "'" + System.DateTime.Now.Date + "'," + "'" + System.DateTime.Now.TimeOfDay + "'," + "'1')";
         SqlDataSource1.Insert();
+
+        SqlDataSource4.SelectCommand = "SELECT * FROM loggedusers WHERE (luname = '" + TextBox1.Text + "')";
+
+        dv = (DataView)SqlDataSource4.Select(DataSourceSelectArguments.Empty);
+        dt = new DataTable();
+        dt = dv.ToTable();
+
+        if (dt.Rows.Count == 0)
+        {
+            SqlDataSource4.InsertCommand = "INSERT INTO loggedusers(luname, luid, luposition, luimg, luspriteimg, lucrisboos, luloggedin, lutspots, lulogintimes, luinvites) VALUES ('" + TextBox1.Text + "', '" + TextBox1.Text + "', '{left : 0, top:0}', '" + Session["loggeduserurl"] + "', '" + Session["loggeduserurl"] + "', '100', 'no', '0', '0', '0')";
+            SqlDataSource4.Insert();
+        }
+        
         Session["loggeduser"] = TextBox1.Text;
-        Response.Redirect("https://thunterweb.apphb.com/index1.aspx");
+        Response.Redirect("~/nickname.aspx");
 	
     }
     else if (dt.Rows.Count != 0 && TextBox2.Text == dt.Rows[0].Field<string>("paid"))
     {
         Session["loggeduser"] = TextBox1.Text;
-        Response.Redirect("https://thunterweb.apphb.com/index1.aspx");
+        Response.Redirect("~/index1.aspx");
     }
 }
 </script>
@@ -85,6 +99,29 @@ UpdateCommand="UPDATE appuserdetails SET @uloggedin='yes'">
             </UpdateParameters>
         </asp:SqlDataSource>
         
+        <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:c9ddedcf-4582-4aa0-b614-a4710054b560ConnectionString %>" SelectCommand="SELECT * FROM loggedusers" InsertCommand="INSERT INTO loggedusers(luname, luid, 
+
+luposition, luimg, luspriteimg, lucrisboos, luloggedin, lutspots, lulogintimes, luinvites) Values (@luname, @luid, 
+
+@luposition, @luimg, @luspriteimg, @lucrisboos, @luloggedin, @lutspots, @lulogintimes, @luinvites)"
+            UpdateCommand="UPDATE appuserdetails SET @uloggedin='yes'">
+            <InsertParameters>
+                <asp:Parameter Name="luname" />
+                <asp:Parameter Name="luid" />
+                <asp:Parameter Name="luposition" />
+                <asp:Parameter Name="luimg" />
+                <asp:Parameter Name="luspriteimg" />
+                <asp:Parameter Name="lucrisboos" />
+                <asp:Parameter Name="luloggedin" />
+                <asp:Parameter Name="lutspots" />
+                <asp:Parameter Name="lulogintimes" />
+                <asp:Parameter Name="luinvites" />
+            </InsertParameters>
+            <UpdateParameters>
+                <asp:Parameter Name="uloggedin" />
+            </UpdateParameters>
+        </asp:SqlDataSource>
+
         <img alt="" src="images/150.jpg" style="position: absolute; z-index: 1; width: 25%; height: 172px; top: 53px; left: 28px;" />
         
     
