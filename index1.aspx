@@ -734,6 +734,7 @@ position: absolute;
 </style>
 
 
+
 <script src="https://thunterweb.apphb.com/Scripts/jquery-1.8.2.js"></script>
 <script src="https://thunterweb.apphb.com/Scripts/jquery-ui-1.10.3.js"></script>
 <script src="https://thunterweb.apphb.com/Scripts/jquery.signalR-2.0.1.js"></script>
@@ -789,6 +790,17 @@ chat.server.Hello(pname + ":", $('#Text1').val()).done(function () {
 });
 }
 }
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-52168843-4', 'auto');
+  ga('send', 'pageview');
+
 </script>
 
 <script type="text/javascript">
