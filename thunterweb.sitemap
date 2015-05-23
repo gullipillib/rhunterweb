@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="https://thunterwen.apphb.com" title="Treasurehunter Game"  description="Play Fun Filled Game. Collect Gold Coins">
+        <siteMapNode url="https://thunterwen.apphb.com" title="Treasurehunter Game"  description="Play Fun Filled Game. Collect Gold Coins" />
+        <siteMapNode url="https://thunterwen.apphb.com" title="Treasurehunter Game"  description="Play Fun Filled Game. Collect Gold Coins" />
+    </siteMapNode>
+</siteMap>
