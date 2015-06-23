@@ -661,7 +661,7 @@ SqlDataSource8.UpdateCommand = "UPDATE tspots SET tsratings='" + Convert.ToStrin
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-<meta name="viewport" content="width=device-width" />
+<meta name=viewport content="width=device-width, initial-scale=1">
 <meta name="description" content="Free Online Game TreasureHunter">
 <meta name="keywords" content="free online games, Treasure Hunter, FaceBook Game, Addicting Games, Earn Real Money in Game, Multi Player, 3D, Real Sound, Viral Game, Fun, Invite Your Friends, Play Now, New Facebook Game " />
 <title>The Treasurehunter, A Free Online Game, Have Fun</title>
