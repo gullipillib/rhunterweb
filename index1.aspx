@@ -733,7 +733,16 @@ position: absolute;
 }
 </style>
 
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- thunterplay -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-4310099988313025"
+     data-ad-slot="3859028596"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <script src="https://thunterweb.apphb.com/Scripts/jquery-1.8.2.js"></script>
 <script src="https://thunterweb.apphb.com/Scripts/jquery-ui-1.10.3.js"></script>
