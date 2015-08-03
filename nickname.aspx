@@ -65,7 +65,20 @@ protected void Button1_Click(object sender, EventArgs e)
     <title>Treasure Hunter Game</title>
    
 </head>
+
+
+
 <body style="background-color:black;">
+ 
+ <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- thunterweb -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4310099988313025"
+     data-ad-slot="1735531399"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
     
     <form id="form1" runat="server">
         <asp:Label ID="Label1" runat="server" ForeColor="White" style="z-index: 1; left: 266px; top: 258px; position: absolute" Text="Playername"></asp:Label>
